@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# 🥗 NutriTrack - AI Powered Nutrition Tracker
 
-## Project info
+NutriTrack is a full-stack AI-powered nutrition tracking web application that allows users to:
 
-**URL**: https://lovable.dev/projects/fc10e370-e0ad-46ec-acc6-2268ad738719
+- 📸 Upload food images
+- 🤖 Analyze food using Google Gemini AI
+- 📊 Track calories and macronutrients
+- 👤 Manage personal health profile
+- 🎯 Set daily nutrition goals
 
-## How can I edit this code?
+Built with modern technologies including React (Vite), Supabase, and Google Gemini API.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Live Demo
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fc10e370-e0ad-46ec-acc6-2268ad738719) and start prompting.
+🔗 https://nutri-track-olive.vercel.app/
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+### Frontend
+- React (Vite)
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- ShadCN UI
+- Supabase JS Client
 
-## How can I deploy this project?
+### Backend
+- Supabase (Auth, Database, Storage)
+- Supabase Edge Functions (Deno)
+- PostgreSQL
 
-Simply open [Lovable](https://lovable.dev/projects/fc10e370-e0ad-46ec-acc6-2268ad738719) and click on Share -> Publish.
+### AI Integration
+- Google Gemini API (Gemini 2.5 Flash)
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## ✨ Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 🔐 Authentication
+- Email/Password login
+- Secure session handling
+- Row Level Security (RLS) policies
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 📸 AI Food Analysis
+- Upload food image
+- Image sent to Gemini API
+- Extracts:
+  - Food name
+  - Serving size
+  - Calories
+  - Protein
+  - Carbohydrates
+  - Fats
+  - Sugar
+  - Sodium
+  - Confidence score
+
+### 👤 User Profile
+- Update personal information
+- Set nutrition goals
+- Automatic BMI calculation
+- Profile upsert logic
+
+### 📊 Dashboard
+- Track food logs
+- View nutritional breakdown
+- Monitor daily goals
+
+---
+
+## 📂 Project Structure
+src/
+├── pages/
+│ ├── Upload.tsx
+│ ├── Dashboard.tsx
+│ ├── Profile.tsx
+│ └── Login.tsx
+│
+├── integrations/
+│ └── supabase/
+│ └── client.ts
+│
+supabase/
+└── functions/
+└── analyze-food/
+└── index.ts
